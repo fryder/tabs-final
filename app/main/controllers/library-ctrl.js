@@ -1,11 +1,11 @@
 'use strict';
 angular.module('main')
-.controller('LibraryCtrl', function ($log, Config, $scope, $cordovaImagePicker, LocalStore) {
+.controller('LibraryCtrl', function ($log, $scope, $cordovaImagePicker, LocalStore) {
 
   $log.log('Hello from your Controller: LibraryCtrl in module main:. This is your controller:', this);
 
-  this.ENV = Config.ENV;
-  this.BUILD = Config.BUILD;
+//  this.ENV = Config.ENV;
+//  this.BUILD = Config.BUILD;
   $scope.ready = false;
   $scope.images = [];
   this.imageKey = 'images';
