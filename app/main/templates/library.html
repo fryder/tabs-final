@@ -1,0 +1,20 @@
+<ion-view view-title="main module">
+  <!-- do you want padding? -->
+  <ion-content class="padding">
+
+    <!-- content goes here -->
+    <ion-list>
+      <ion-item class="item item-divider">Upload Images:</ion-item>
+      <ion-item class="item item-text-wrap">
+        <button class="button button-block button-balanced" ng-click="selImages()">
+          Select Images
+        </button>
+
+        <p ng-repeat="img in images">
+          <img ng-src="{{img}}" style="max-width:250px;max-height:250px" />
+        </p>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>
