@@ -1,0 +1,30 @@
+yo m-ionic:constant <constantName> <moduleName>
+yo m-ionic:controller <controllerName> <moduleName>
+yo m-ionic:directive <directiveName> <moduleName>
+yo m-ionic:filter <filterName> <moduleName>
+yo m-ionic:pair <pairName> <moduleName> # creates controller & template
+yo m-ionic:template <templateName> <moduleName>
+yo m-ionic:service <serviceName> <moduleName>
+
+
+yo m-ionic:template multi-image-view main
+yo m-ionic:controller library main
+yo m-ionic:template library main
+yo m-ionic:service localStore main
+yo m-ionic:service imageStore main
+
+gulp --cordova ‘plugin add https://github.com/wymsee/cordova-imagePicker.git’
+
+gulp --cordova 'run android —device’
+
+
+yo m-ionic:template stock main
+yo m-ionic:template my-stocks main
+yo m-ionic:template login main
+yo m-ionic:controller MyStocks main
+yo m-ionic:controller Stock main
+yo m-ionic:controller Login main
+
+
+yo m-ionic:directive Login main
+yo m-ionic:filter Login main

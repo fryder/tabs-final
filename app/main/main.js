@@ -3,10 +3,12 @@ angular.module('main', [
   'ionic',
   'ngCordova',
   'ui.router',
+  'firebase'
   // TODO: load other modules selected during generation
 ])
-.config(function ($stateProvider, $urlRouterProvider) {
+.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
+  $ionicConfigProvider.tabs.position('bottom');
   // ROUTING with ui.router
   $urlRouterProvider.otherwise('/main/list');
   $stateProvider

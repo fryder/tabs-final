@@ -6,9 +6,11 @@ angular.module('main')
 
 //  this.ENV = Config.ENV;
 //  this.BUILD = Config.BUILD;
+  this.imageKey = 'images';
   $scope.ready = false;
   $scope.images = [];
-  this.imageKey = 'images';
+  $scope.imageWithname = {};
+
 
   $scope.selImages = function () {
 
@@ -24,8 +26,8 @@ angular.module('main')
         for (var i = 0; i < results.length; i++) {
           $log.log('Image URI: ' + results[i]);
           $scope.images.push(results[i]);
-          LocalStore.setObject(this.imageKey, $scope.images);
         }
+        LocalStore.setObject(this.imageKey, $scope.images);
         if (!$scope.$$phase) {
           $scope.$apply();
         }
